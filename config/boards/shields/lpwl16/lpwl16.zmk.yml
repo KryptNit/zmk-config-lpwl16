@@ -1,0 +1,10 @@
+file_format: "1"
+id: lpwl16
+name: LPWL16
+type: shield
+url: https://github.com/KryptNit/zmk-config-lpwl16
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - lpwl16
