@@ -2,18 +2,32 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define Base 0
+#define Abc  1
+
 
 / {
     keymap {
         compatible = "zmk,keymap";
-        default_layer { // Layer 0
+        Base { // Layer 0
             display-name = "Base";
 
             bindings = <
                 &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS
                 &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS
                 &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY
-                &kp KP_N0   &kp KP_DOT  &kp ENTER   &kp X
+                &kp KP_N0   &kp KP_DOT  &kp ENTER   &lt 1 SPACE
+            >;
+        };
+
+        abc { // Layer 1
+            display-name = "Abc";
+
+                bindings = <
+                &kp Q       &kp W       &kp E       &kp R
+                &kp A       &kp S       &kp D       &kp F
+                &kp Z       &kp X       &kp C       &kp V
+                &kp U       &kp I       &kp O       &trans
             >;
         };
 
