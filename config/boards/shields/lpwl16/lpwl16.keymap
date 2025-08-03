@@ -2,31 +2,29 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define BASE 0
-#define NAV  1
 
 / {
     keymap {
         compatible = "zmk,keymap";
-            base_layer {
-            label= "BASE";
+        default_layer { // Layer 0
+            display-name = "Base";
 
-                bindings = <
+            bindings = <
                 &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS
                 &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS
                 &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY
                 &kp KP_N0   &kp KP_DOT  &kp ENTER   &lt 1
-                       >;
-                };
-            nav_layer {
-            label= "NAVI";
+            >;
+        };
+        abc { // Layer 1
+            display-name = "ABC";
 
                 bindings = <
                 &kp Q       &kp W       &kp E       &kp R
                 &kp A       &kp S       &kp D       &kp F
                 &kp Z       &kp X       &kp C       &kp V
                 &kp U       &kp I       &kp O       &trans
-                       >;
-                };
+            >;
         };
+    };
 };
